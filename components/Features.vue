@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-white border-b py-8">
+  <section class="bg-white py-8">
     <div class="container max-w-5xl mx-auto m-8">
       <h1
         class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800"
@@ -15,13 +15,13 @@
         headline="Resep Simple"
         content="Kita bisa membuat resep sederhana dengan rasa yang luar biasa. melalui resep otentik, kita akan mendapatkan hidangan yang memanjakan lidah kita"
       >
-        <img src="~assets/img/simpleRecipe.png?inline" class="w-3/4 h-auto" alt="simple recipe" slot="svg" />
+        <img src="~assets/img/simpleRecipe.png?inline" class="w-3/4 h-auto mx-auto" alt="simple recipe" slot="svg" />
       </feature-right>
       <feature-left
         headline="Ingridient Simple"
         content="melalui bahan-bahan sederhana kita bisa membuat berbagai macam masakan yang mengundang selera"
       >
-        <img src="~assets/img/simpleIngredient.png?inline" class="w-3/4 h-auto " alt="simple ingredient" slot="svg" />
+        <img src="~assets/img/simpleIngredient.png?inline" class="w-3/4 h-auto mx-auto" alt="simple ingredient" slot="svg" />
       </feature-left>
     </div>
   </section>

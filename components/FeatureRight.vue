@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-wrap">
-    <div class="w-5/6 sm:w-1/2 m-auto px-2">
+    <div class="w-5/6 sm:w-1/2 mx-auto my-auto p-6">
       <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
         {{ headline }}
       </h3>

@@ -7,7 +7,7 @@
       <div
         class="flex flex-col w-full md:w-3/6 justify-center items-start text-center md:text-left"
       >
-        <p class="uppercase tracking-loose w-full">masakapa.com</p>
+        <p class="uppercase tracking-loose font-bold w-full">masakapa.com</p>
         <h1 class="my-4 text-5xl font-bold leading-tight">
           Mudah dan Menyenangkan untuk menjadi Juru Masak
         </h1>
@@ -24,7 +24,7 @@
       </div>
       <!--Right Col-->
       <div class="w-full md:w-3/6 py-6 text-center">
-        <img class="w-full md:w-4/5 z-50" src="~/assets/img/hero.png" alt="imagehero" />
+        <img class="w-full md:w-4/5 z-50 mx-auto" src="~/assets/img/hero.png" alt="imagehero" />
       </div>
     </div>
   </div>

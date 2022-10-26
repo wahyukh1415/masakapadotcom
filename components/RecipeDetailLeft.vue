@@ -13,7 +13,7 @@
       <p class="text-gray-600 mb-3">
         {{ content }}
       </p>
-      <h3 class="text-3xl text-gray-600 font-bold leading-none mb-3">Ingredient</h3>
+      <h3 class="text-3xl text-gray-600 font-bold leading-none mb-3 mt-3">Ingredient</h3>
       <div v-if="ingredient.length">
         <ul v-for="(data, index) in ingredient" v-bind:Key="index" class="text-gray-600 mb-3">
           <li>
@@ -26,7 +26,7 @@
           Tidak ada yang ingridient
         </p>
       </div>
-      <h3 class="text-3xl text-gray-600 font-bold leading-none mb-3">Item yang dibutuhkan</h3>
+      <h3 class="text-3xl text-gray-600 font-bold leading-none mb-3 mt-3">Bahan yang dibutuhkan</h3>
       <div v-if="needItem.length">
         <ul v-for="(data, index) in needItem" v-bind:Key="index" class="text-gray-600 mb-3">
           <li>
@@ -39,7 +39,7 @@
           Tidak ada yang dibutuhkan
         </p>
       </div>
-      <h3 class="text-3xl text-gray-600 font-bold leading-none mb-3">Step by Step</h3>
+      <h3 class="text-3xl text-gray-600 font-bold leading-none mb-3 mt-3">Step by Step</h3>
       <div v-if="Step.length">
         <ul v-for="(data, index) in Step" v-bind:Key="index" class="text-gray-600 mb-3">
           <li>
@@ -57,14 +57,23 @@
     </div>
     <div class="w-full sm:w-1/2 p-6">
       <slot name="svg" class="w-3/4 h-auto" />
-      <p class="text-gray-600 mb-3">
-        Tingkat Kesulitan: {{ difficulty }}
+      <p class="text-gray-600 my-3">
+        <span class="font-semibold">
+          Tingkat Kesulitan:
+        </span>
+        {{ difficulty }}
       </p>
       <p class="text-gray-600 mb-3">
-        Saran Penyajian: {{ serving }}
+        <span class="font-semibold">
+          Saran Penyajian: 
+        </span>
+        {{ serving }}
       </p>
       <p class="text-gray-600 mb-3">
-        Waktu Untuk Memasak: {{ time }}
+        <span class="font-semibold">
+          Waktu Untuk Memasak:
+        </span>
+         {{ time }}
       </p>
     </div>
   </div>

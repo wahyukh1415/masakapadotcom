@@ -4,7 +4,7 @@
     class="no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
     href="/"
   >
-    <img src="~/assets/img/logoMasakApaDotCom.png" class="h-auto w-28" alt="Logo">
+    <img src="~/assets/img/logoMasakApaDotCom.png" class="h-auto w-28 mx-auto" alt="Logo">
   </a>
 </template>
 

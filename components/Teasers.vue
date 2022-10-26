@@ -1,5 +1,6 @@
 <template>
-  <section class="bg-gray-100 border-b py-8">
+  <section class="bg-white py-8">
+  <loadingBar :isVisible="isLoading"/>
     <div class="container mx-auto flex flex-wrap pt-4 pb-12">
       <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
         {{ $route.name === 'allRecipe' ? 'Semua Resep' : 'Rekomendasi Resep' }}
@@ -14,10 +15,7 @@
         </teaser-column>
       </div>
       <div v-else class="mx-auto">
-        <svg class="animate-spin h-5 w-5 mr-3 ..." viewBox="0 0 24 24">
-          <!-- ... -->
-        </svg>
-        <p class="text-gray-600 text-center font-bold mb-3">
+        <p class="text-gray-600 text-center font-bold mb-32">
           Menu Masih Kosong
         </p>
       </div>
@@ -28,15 +26,18 @@
 <script>
   import TeaserColumn from '@/components/TeaserColumn'
   import axiosInstances from '../utils/server'
+  import LoadingBar from '@/components/LoadingBar'
 
   export default {
     name: 'Teasers',
     components: {
-      'teaser-column': TeaserColumn
+      'teaser-column': TeaserColumn,
+      loadingBar:LoadingBar
     },
     data: function () {
       return {
         showRecipe: [],
+        isLoading: true
       }
     },
     mounted() {
@@ -45,13 +46,12 @@
     methods: {
       async fetchLatestRecipe() {
         let self = this
+        this.isLoading = true
         await axiosInstances({
             url: "/recipes",
             method: "get",
           })
-          .then(({
-            data
-          }) => {
+          .then(({data}) => {
             if (self.$route.name === 'allRecipe') {
               if (data.results.length % 2 === 0) {
                 this.showRecipe = data.results.slice(0, data.results.length - 1)
@@ -61,18 +61,16 @@
             } else {
               this.showRecipe = data.results.slice(0, 3)
             }
+            self.isLoading = false
           })
           .catch((err) => {
             console.log(err);
+            alert(err)
+            self.isLoading = false
           });
       },
       toDetail(key) {
-        this.$router.push({
-          name: 'detailRecipe',
-          query: {
-            key: key
-          }
-        })
+        this.$router.push({name: 'detailRecipe', query: { key: key}})
       }
     },
   }

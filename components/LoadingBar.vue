@@ -38,7 +38,9 @@ export default {
     perspective: 600px;
     border: 4px solid #d53369;
     border-radius: 50%;
-    border-top-color: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+    border-top-color: #daae51;
+    border-bottom-color: #5fff2f;
+    border-left-color: lightgray;
     animation: spin 1s ease-in-out infinite;
 }
 @keyframes spin {

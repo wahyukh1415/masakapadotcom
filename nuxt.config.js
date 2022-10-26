@@ -2,26 +2,6 @@ export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
 
-  loadingIndicator: {
-    name: 'rotating-plane',
-    color: 'blue',
-    background: 'red'
-  },
-
-  loading: {
-    color: 'DodgerBlue',
-    height: '10px'
-  },
-
-  loading: false,
-
-  loading: {
-    duration: 2000,
-    continuous: true
-  },
-
-  loading: '@/components/LoadingBar.vue',
-
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'masakapaproject',

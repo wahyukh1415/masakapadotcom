@@ -7,7 +7,7 @@
 <script>
 export default {
   props: ({
-    isVisible: {type: Boolean, required: true},
+    isVisible: {type: Boolean, required: false},
     text: {type: String, required: false, default: ""},
   })
 }
